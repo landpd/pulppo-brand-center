@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide D · Icon List" subtitle="Layout D · 5 pilares con iconos 32px stroke 1.5" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout D — Icon List</title>
+<link rel="stylesheet" href="_slide.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  .slide--D { padding: 84px 64px 64px; display: flex; flex-direction: column; gap: 40px; box-sizing: border-box; }
+  .slide--D .tag { font: 700 12pt/1.2 var(--font-body); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); }
+  .slide--D .h1 { font: 400 38pt/1.15 var(--font-display); color: var(--text-primary); margin: 0; max-width: 900px; letter-spacing: -0.005em; }
+  .slide--D .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; margin-top: 8px; }
+  .slide--D .item { display: grid; grid-template-columns: 36px 1fr; gap: 18px; }
+  .slide--D .icon svg { width: 32px; height: 32px; stroke: var(--icon-default); stroke-width: 1.5; }
+  .slide--D .body { display: flex; flex-direction: column; gap: 6px; padding-left: 14px; border-left: 1pt solid var(--accent); }
+  .slide--D .pillar { font: 700 12pt/1.2 var(--font-body); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-primary); }
+  .slide--D .copy { font: 400 13pt/1.0 var(--font-body); color: var(--text-primary); text-wrap: pretty; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--D">
+    <span class="tag">Cómo funciona Pulppo</span>
+    <h1 class="h1">Cinco pilares que profesionalizan inmobiliarias.</h1>
+    <div class="grid">
+      <div class="item">
+        <div class="icon"><i data-lucide="monitor"></i></div>
+        <div class="body">
+          <span class="pillar">Tecnología</span>
+          <span class="copy">Plataforma que cubre captación, valuación, oferta y cierre en un solo flujo, sin atajos.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon"><i data-lucide="sliders-horizontal"></i></div>
+        <div class="body">
+          <span class="pillar">Consultoría</span>
+          <span class="copy">Diagnóstico operativo basado en datos reales por inmobiliaria, por broker, por operación.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon"><i data-lucide="users"></i></div>
+        <div class="body">
+          <span class="pillar">Comunidad</span>
+          <span class="copy">Red de inmobiliarias que comparten inventario, leads y aprendizajes operativos.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon"><i data-lucide="rocket"></i></div>
+        <div class="body">
+          <span class="pillar">Marketing</span>
+          <span class="copy">Promovemos tu contenido para generar más ventas, con presupuesto y métricas accionables.</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon"><i data-lucide="gavel"></i></div>
+        <div class="body">
+          <span class="pillar">Legal</span>
+          <span class="copy">Revisión de documentos y contratos para tus operaciones, en 24 a 48 horas hábiles.</span>
+        </div>
+      </div>
+    </div>
+    <img class="logo" src="../assets/pulppo-symbol-black.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+<script>lucide.createIcons();</script>
+</body></html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide B · Title + Body + Foto" subtitle="Layout B · el más usado · 50/50 vertical, foto derecha" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout B — Title + Body + Foto</title>
+<link rel="stylesheet" href="_slide.css">
+<style>
+  .slide--B { display: grid; grid-template-columns: 1fr 1fr; }
+  .slide--B .content {
+    padding: 84px 56px 64px 64px;
+    display: flex; flex-direction: column;
+    justify-content: center; gap: 56px;
+  }
+  .slide--B .tag {
+    font: 700 12pt/1.2 var(--font-body);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-secondary);
+  }
+  .slide--B .h1 {
+    font: 400 36pt/1.15 var(--font-display);
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .slide--B .body-row { display: grid; grid-template-columns: 1pt 1fr; gap: 16px; }
+  .slide--B .body-row .accent-v { background: var(--accent); height: auto; }
+  .slide--B .body-row p {
+    font: 400 16pt/1.0 var(--font-body);
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: pretty;
+  }
+  .slide--B .photo {
+    background:
+      linear-gradient(135deg, rgba(33,35,34,0.0) 0%, rgba(33,35,34,0.0) 100%),
+      url('../assets/photos/office.webp') center/cover;
+  }
+  .slide--B .logo { top: 28px; right: 36px; width: 44px; height: 44px; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--B">
+    <div class="content">
+      <span class="tag">Pilar · Tecnología</span>
+      <h1 class="h1">Diseñada para brindar una experiencia sobresaliente a ti y a tus clientes.</h1>
+      <div class="body-row">
+        <span class="accent-v"></span>
+        <p>Captación, valuación, oferta y cierre en un solo flujo. Datos reales por inmobiliaria, por broker y por operación. Tiempo de respuesta promedio 24 a 48 horas.</p>
+      </div>
+    </div>
+    <div class="photo"></div>
+    <img class="logo" src="../assets/pulppo-symbol-black.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+</body></html>

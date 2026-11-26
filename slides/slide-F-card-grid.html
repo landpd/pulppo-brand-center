@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide F · Card Grid" subtitle="Layout F · 3×2 cards en light-gray, gap 0.10'" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout F — Card Grid</title>
+<link rel="stylesheet" href="_slide.css">
+<style>
+  .slide--F { padding: 84px 64px 64px; display: flex; flex-direction: column; gap: 28px; box-sizing: border-box; }
+  .slide--F .tag { font: 700 12pt/1.2 var(--font-body); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); }
+  .slide--F .h1 { font: 400 36pt/1.15 var(--font-display); color: var(--text-primary); margin: 0; max-width: 900px; letter-spacing: -0.005em; }
+  .slide--F .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; flex: 1; margin-top: 8px; }
+  .slide--F .ck { background: var(--surface-card); padding: 32px 30px 30px; display: flex; flex-direction: column; }
+  .slide--F .ck .num { font: 400 28pt/1.1 var(--font-display); color: var(--text-primary); margin-bottom: 20px; }
+  .slide--F .ck h3 { font: 700 14pt/1.2 var(--font-body); margin: 0 0 10px; color: var(--text-primary); }
+  .slide--F .ck p  { font: 400 12pt/1.0 var(--font-body); margin: 0; color: var(--text-primary); text-wrap: pretty; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--F">
+    <span class="tag">Casos de uso</span>
+    <h1 class="h1">Lo que cubrimos, en piezas.</h1>
+    <div class="grid">
+      <div class="ck"><span class="num">01</span><h3>Inventario unificado</h3><p>Una sola base de propiedades sincronizada entre todos los brokers de la red, sin duplicados.</p></div>
+      <div class="ck"><span class="num">02</span><h3>Captación de leads</h3><p>Pipeline con seguimiento medible operación por operación y datos por broker.</p></div>
+      <div class="ck"><span class="num">03</span><h3>Valuación automática</h3><p>Comparables de mercado actualizados por colonia, tipología y metros construidos.</p></div>
+      <div class="ck"><span class="num">04</span><h3>Cierre legal</h3><p>Plantillas y revisión de contratos para tus operaciones en 24 a 48 horas hábiles.</p></div>
+      <div class="ck"><span class="num">05</span><h3>Marketing pagado</h3><p>Campañas de propiedades destacadas con presupuesto y métricas accionables.</p></div>
+      <div class="ck"><span class="num">06</span><h3>Reportes operativos</h3><p>KPIs por broker, por oficina y por región. Datos crudos exportables a Excel.</p></div>
+    </div>
+    <img class="logo" src="../assets/pulppo-symbol-black.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+</body></html>

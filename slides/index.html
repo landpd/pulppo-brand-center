@@ -1,0 +1,259 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Deck · 7 plantillas oficiales" subtitle="Navega A→G con ←/→ · usa deck-stage para escalar 1280×720" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Plantillas oficiales</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #212322; font-family: var(--font-body); }
+  deck-stage { width: 100vw; height: 100vh; }
+
+  /* ---- shared ---- */
+  section[data-slide] {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  section[data-slide]:not(.dark):not(.E) {
+    background: var(--surface-default);
+    color: var(--text-primary);
+  }
+  .slogo { position: absolute; top: 28px; right: 36px; width: 44px; height: 44px; }
+  .accent { display: inline-block; height: 1pt; width: 90px; background: var(--accent); }
+  .accent-v { display: inline-block; width: 1pt; background: var(--accent); }
+  .tag {
+    font: 700 12pt/1.2 var(--font-body);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-secondary);
+  }
+  section[data-slide].dark { background: var(--surface-dark); color: var(--text-on-dark); }
+
+  /* ---- A · Section Divider ---- */
+  .A .label { position: absolute; left: 64px; top: 64px; color: var(--color-gray); }
+  .A .h1 {
+    position: absolute; left: 64px; top: 280px; right: 280px;
+    font: 400 52pt/1.15 var(--font-display);
+    color: var(--text-on-dark); margin: 0; letter-spacing: -0.01em;
+  }
+  .A .accent { position: absolute; left: 64px; top: 520px; }
+  .A .sub {
+    position: absolute; left: 64px; top: 555px; right: 280px;
+    font: 400 16pt/1.5 var(--font-body);
+    color: var(--text-on-dark); margin: 0; max-width: 720px;
+  }
+
+  /* ---- B · Title + Body + Foto ---- */
+  .B { display: grid; grid-template-columns: 1fr 1fr; }
+  .B .content { padding: 84px 56px 64px 64px; display: flex; flex-direction: column; justify-content: center; gap: 56px; }
+  .B .photo {
+    background: url('../assets/photos/office.webp') center/cover;
+  }
+  .B .h1 {
+    font: 400 36pt/1.15 var(--font-display);
+    color: var(--text-primary); margin: 0; letter-spacing: -0.005em;
+  }
+  .B .body-row { display: grid; grid-template-columns: 1pt 1fr; gap: 16px; }
+  .B .body-row .accent-v { height: auto; align-self: stretch; }
+  .B .body-row p {
+    font: 400 16pt/1.0 var(--font-body);
+    color: var(--text-primary); margin: 0; text-wrap: pretty;
+  }
+
+  /* ---- C · Stat Row ---- */
+  .C { padding: 84px 64px 64px; display: flex; flex-direction: column; gap: 36px; }
+  .C .h1 {
+    font: 400 36pt/1.2 var(--font-display);
+    color: var(--text-primary); margin: 0; max-width: 1050px; letter-spacing: -0.005em;
+  }
+  .C .row {
+    display: grid; grid-template-columns: 1fr 1pt 1fr 1pt 1fr 1pt 1fr;
+    gap: 0 32px; flex: 1; margin-top: 24px;
+  }
+  .C .col { display: flex; flex-direction: column; justify-content: space-between; padding-left: 20px; gap: 24px; }
+  .C .caption { font: 400 13pt/1.4 var(--font-body); color: var(--text-primary); max-width: 220px; }
+  .C .caption strong { font-weight: 700; }
+  .C .num {
+    font: 700 64pt/0.95 var(--font-body);
+    color: var(--text-primary); letter-spacing: -0.04em;
+    display: inline-flex; align-items: baseline; white-space: nowrap;
+  }
+  .C .num .unit-up {
+    font: 700 18pt/1 var(--font-body);
+    text-transform: uppercase; letter-spacing: 0.04em; margin-left: 4px;
+  }
+  .C .sep { background: var(--color-gray); align-self: stretch; }
+
+  /* ---- D · Icon List ---- */
+  .D { padding: 84px 64px 64px; display: flex; flex-direction: column; gap: 32px; }
+  .D .h1 {
+    font: 400 36pt/1.15 var(--font-display);
+    color: var(--text-primary); margin: 0; max-width: 900px; letter-spacing: -0.005em;
+  }
+  .D .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; margin-top: 40px; }
+  .D .item { display: grid; grid-template-columns: 36px 1fr; gap: 18px; }
+  .D .icon svg { width: 32px; height: 32px; stroke: var(--icon-default); stroke-width: 1.5; }
+  .D .copyblk { display: flex; flex-direction: column; gap: 6px; padding-left: 14px; border-left: 1pt solid var(--accent); }
+  .D .pillar { font: 700 12pt/1.2 var(--font-body); text-transform: uppercase; letter-spacing: 0.06em; }
+  .D .copy { font: 400 13pt/1.0 var(--font-body); text-wrap: pretty; }
+
+  /* ---- E · Hero Photo ---- */
+  section[data-slide].E {
+    background:
+      linear-gradient(180deg, rgba(33,35,34,0.7) 0%, rgba(33,35,34,0.7) 100%),
+      url('../assets/photos/skyline.webp') center/cover;
+    color: var(--text-on-dark);
+  }
+  .E .tag { position: absolute; left: 64px; top: 64px; color: var(--color-gray); }
+  .E .h1 {
+    position: absolute; left: 64px; top: 260px; right: 200px;
+    font: 400 52pt/1.15 var(--font-display);
+    color: var(--text-on-dark); margin: 0; letter-spacing: -0.01em; text-wrap: balance;
+  }
+  .E .accent { position: absolute; left: 64px; top: 520px; }
+  .E .sub {
+    position: absolute; left: 64px; top: 555px; right: 280px;
+    font: 400 16pt/1.5 var(--font-body); color: var(--text-on-dark); margin: 0;
+  }
+
+  /* ---- F · Card Grid ---- */
+  .F { padding: 84px 64px 64px; display: flex; flex-direction: column; gap: 22px; }
+  .F .h1 {
+    font: 400 36pt/1.15 var(--font-display);
+    color: var(--text-primary); margin: 0; max-width: 900px;
+  }
+  .F .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; flex: 1; margin-top: 6px; }
+  .F .ck { background: var(--surface-card); padding: 32px 30px 30px; display: flex; flex-direction: column; }
+  .F .ck .num { font: 400 28pt/1.1 var(--font-display); color: var(--text-primary); margin-bottom: 20px; }
+  .F .ck h3 { font: 700 14pt/1.2 var(--font-body); margin: 0 0 10px; color: var(--text-primary); }
+  .F .ck p { font: 400 12pt/1.0 var(--font-body); margin: 0; color: var(--text-primary); text-wrap: pretty; }
+
+  /* ---- G · Closing Dark ---- */
+  .G .label { position: absolute; left: 64px; top: 64px; color: var(--color-gray); }
+  .G .h1 {
+    position: absolute; left: 64px; top: 220px; right: 280px;
+    font: 400 60pt/1.1 var(--font-display);
+    color: var(--text-on-dark); margin: 0; letter-spacing: -0.01em;
+  }
+  .G .accent { position: absolute; left: 64px; bottom: 220px; }
+  .G .contact {
+    position: absolute; left: 64px; bottom: 64px;
+    display: grid; grid-template-columns: auto auto; gap: 8px 36px;
+    font: 400 14pt/1.5 var(--font-body); color: var(--text-on-dark);
+  }
+  .G .contact .k { color: var(--color-gray); }
+</style>
+</head>
+<body>
+<deck-stage width="1280" height="720">
+
+  <!-- A · Section Divider -->
+  <section class="A dark" data-slide data-screen-label="01 Section Divider">
+    <div class="label tag">02 · Tecnología</div>
+    <h1 class="h1">Una plataforma diseñada para brokers, no para clientes finales.</h1>
+    <span class="accent"></span>
+    <p class="sub">Construimos sobre la operación real de las inmobiliarias: captación, valuación, oferta, cierre. Sin atajos.</p>
+    <img class="slogo" src="../assets/pulppo-symbol-white.png" alt="">
+  </section>
+
+  <!-- B · Title + Body + Foto -->
+  <section class="B" data-slide data-screen-label="02 Title + Body + Foto">
+    <div class="content">
+      <span class="tag">Pilar · Tecnología</span>
+      <h1 class="h1">Diseñada para brindar una experiencia sobresaliente a ti y a tus clientes.</h1>
+      <div class="body-row">
+        <span class="accent-v"></span>
+        <p>Captación, valuación, oferta y cierre en un solo flujo. Datos reales por inmobiliaria, por broker y por operación. Tiempo de respuesta promedio 24 a 48 horas.</p>
+      </div>
+    </div>
+    <div class="photo"></div>
+    <img class="slogo" src="../assets/pulppo-symbol-black.png" alt="">
+  </section>
+
+  <!-- C · Stat Row -->
+  <section class="C" data-slide data-screen-label="03 Stat Row">
+    <span class="tag">Resultados · últimos 12 meses</span>
+    <h1 class="h1">Las inmobiliarias acompañadas por Pulppo crecieron<br>más del 60% en menos de un año.</h1>
+    <div class="row">
+      <div class="col">
+        <div class="caption">Incremento en <strong>ventas promedio</strong> en el primer año de alianza</div>
+        <div class="num">+60<span class="unit-up">%</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="col">
+        <div class="caption"><strong>Horas ahorradas</strong> de trabajo cada semana por asesor</div>
+        <div class="num">5–8<span class="unit-up">h</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="col">
+        <div class="caption"><strong>Facturación</strong> promedio en comisiones de una inmobiliaria chica</div>
+        <div class="num">$230<span class="unit-up">k</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="col">
+        <div class="caption"><strong>Comisión</strong> promedio en operaciones de venta de nuestros asesores</div>
+        <div class="num">4–5<span class="unit-up">%</span></div>
+      </div>
+    </div>
+    <img class="slogo" src="../assets/pulppo-symbol-black.png" alt="">
+  </section>
+
+  <!-- D · Icon List -->
+  <section class="D" data-slide data-screen-label="04 Icon List">
+    <span class="tag">Cómo funciona Pulppo</span>
+    <h1 class="h1">Cinco pilares que profesionalizan inmobiliarias.</h1>
+    <div class="grid">
+      <div class="item"><div class="icon"><i data-lucide="monitor"></i></div><div class="copyblk"><span class="pillar">Tecnología</span><span class="copy">Plataforma que cubre captación, valuación, oferta y cierre en un solo flujo, sin atajos.</span></div></div>
+      <div class="item"><div class="icon"><i data-lucide="sliders-horizontal"></i></div><div class="copyblk"><span class="pillar">Consultoría</span><span class="copy">Diagnóstico operativo basado en datos reales por inmobiliaria, por broker, por operación.</span></div></div>
+      <div class="item"><div class="icon"><i data-lucide="users"></i></div><div class="copyblk"><span class="pillar">Comunidad</span><span class="copy">Red de inmobiliarias que comparten inventario, leads y aprendizajes operativos.</span></div></div>
+      <div class="item"><div class="icon"><i data-lucide="rocket"></i></div><div class="copyblk"><span class="pillar">Marketing</span><span class="copy">Promovemos tu contenido para generar más ventas, con presupuesto y métricas accionables.</span></div></div>
+      <div class="item"><div class="icon"><i data-lucide="gavel"></i></div><div class="copyblk"><span class="pillar">Legal</span><span class="copy">Revisión de documentos y contratos para tus operaciones, en 24 a 48 horas hábiles.</span></div></div>
+    </div>
+    <img class="slogo" src="../assets/pulppo-symbol-black.png" alt="">
+  </section>
+
+  <!-- E · Hero Photo -->
+  <section class="E" data-slide data-screen-label="05 Hero Photo">
+    <span class="tag">After Office</span>
+    <h1 class="h1">La primera aceleradora de inmobiliarias de Latinoamérica.</h1>
+    <span class="accent"></span>
+    <p class="sub">Conoce al equipo, la plataforma y la propuesta de valor — mientras disfrutas un buen networking.</p>
+    <img class="slogo" src="../assets/pulppo-symbol-white.png" alt="">
+  </section>
+
+  <!-- F · Card Grid -->
+  <section class="F" data-slide data-screen-label="06 Card Grid">
+    <span class="tag">Casos de uso</span>
+    <h1 class="h1">Lo que cubrimos, en piezas.</h1>
+    <div class="grid">
+      <div class="ck"><span class="num">01</span><h3>Inventario unificado</h3><p>Una sola base de propiedades sincronizada entre todos los brokers de la red, sin duplicados.</p></div>
+      <div class="ck"><span class="num">02</span><h3>Captación de leads</h3><p>Pipeline con seguimiento medible operación por operación y datos por broker.</p></div>
+      <div class="ck"><span class="num">03</span><h3>Valuación automática</h3><p>Comparables de mercado actualizados por colonia, tipología y metros construidos.</p></div>
+      <div class="ck"><span class="num">04</span><h3>Cierre legal</h3><p>Plantillas y revisión de contratos para tus operaciones en 24 a 48 horas hábiles.</p></div>
+      <div class="ck"><span class="num">05</span><h3>Marketing pagado</h3><p>Campañas de propiedades destacadas con presupuesto y métricas accionables.</p></div>
+      <div class="ck"><span class="num">06</span><h3>Reportes operativos</h3><p>KPIs por broker, por oficina y por región. Datos crudos exportables a Excel.</p></div>
+    </div>
+    <img class="slogo" src="../assets/pulppo-symbol-black.png" alt="">
+  </section>
+
+  <!-- G · Closing Dark -->
+  <section class="G dark" data-slide data-screen-label="07 Closing Dark">
+    <div class="label tag">/ Cierre</div>
+    <h1 class="h1">Hablemos de tu inmobiliaria.</h1>
+    <span class="accent"></span>
+    <div class="contact">
+      <span class="k">Web</span><span>pulppo.com</span>
+      <span class="k">Email</span><span>hola@pulppo.com</span>
+      <span class="k">Oficina</span><span>Homero 664, Polanco · CDMX</span>
+    </div>
+    <img class="slogo" src="../assets/pulppo-symbol-white.png" alt="">
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+<script>lucide.createIcons();</script>
+</body></html>

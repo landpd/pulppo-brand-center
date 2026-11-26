@@ -1,0 +1,91 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide C · Stat Row" subtitle="Layout C · 3–5 stats grandes con separadores neutrales" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout C — Stat Row</title>
+<link rel="stylesheet" href="_slide.css">
+<style>
+  .slide--C { padding: 84px 64px 64px; display: flex; flex-direction: column; gap: 36px; box-sizing: border-box; }
+  .slide--C .tag { font: 700 12pt/1.2 var(--font-body); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); }
+  .slide--C .h1 {
+    font: 400 36pt/1.2 var(--font-display);
+    color: var(--text-primary);
+    margin: 0;
+    max-width: 1050px;
+    letter-spacing: -0.005em;
+  }
+  .slide--C .row {
+    display: grid;
+    grid-template-columns: 1fr 1pt 1fr 1pt 1fr 1pt 1fr;
+    gap: 0 32px;
+    flex: 1;
+    margin-top: 24px;
+  }
+  .slide--C .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    gap: 24px;
+  }
+  .slide--C .caption {
+    font: 400 13pt/1.4 var(--font-body);
+    color: var(--text-primary);
+    max-width: 220px;
+  }
+  .slide--C .caption strong { font-weight: 700; }
+  .slide--C .num {
+    font: 700 64pt/0.95 var(--font-body);
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+  }
+  .slide--C .num .unit {
+    font: 400 22pt/1 var(--font-body);
+    letter-spacing: -0.02em;
+    margin-left: 2px;
+  }
+  .slide--C .num .unit-up {
+    font: 700 18pt/1 var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-left: 4px;
+  }
+  .slide--C .sep { background: var(--color-gray); align-self: stretch; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--C">
+    <span class="tag">Resultados · últimos 12 meses</span>
+    <h1 class="h1">Las inmobiliarias acompañadas por Pulppo crecieron<br>más del 60% en menos de un año.</h1>
+    <div class="row">
+      <div class="col">
+        <div class="caption">Incremento en <strong>ventas promedio</strong> en el primer año de alianza</div>
+        <div class="num">+60<span class="unit-up">%</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="col">
+        <div class="caption"><strong>Horas ahorradas</strong> de trabajo cada semana por asesor</div>
+        <div class="num">5–8<span class="unit-up">h</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="col">
+        <div class="caption"><strong>Facturación</strong> promedio en comisiones de una inmobiliaria chica</div>
+        <div class="num">$230<span class="unit-up">k</span></div>
+      </div>
+      <div class="sep"></div>
+      <div class="col">
+        <div class="caption"><strong>Comisión</strong> promedio en operaciones de venta de nuestros asesores</div>
+        <div class="num">4–5<span class="unit-up">%</span></div>
+      </div>
+    </div>
+    <img class="logo" src="../assets/pulppo-symbol-black.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+</body></html>

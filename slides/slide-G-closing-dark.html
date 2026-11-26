@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide G · Closing Dark" subtitle="Layout G · cierre dark con datos de contacto" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout G — Closing Dark</title>
+<link rel="stylesheet" href="_slide.css">
+<style>
+  .slide--G { background: var(--surface-dark); color: var(--text-on-dark); }
+  .slide--G .label {
+    position: absolute; left: 64px; top: 64px;
+    font: 700 12pt/1.2 var(--font-body);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--color-gray);
+  }
+  .slide--G .h1 {
+    position: absolute; left: 64px; top: 220px; right: 280px;
+    font: 400 64pt/1.1 var(--font-display);
+    color: var(--text-on-dark);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .slide--G .accent { position: absolute; left: 64px; bottom: 220px; width: 90px; }
+  .slide--G .contact {
+    position: absolute; left: 64px; bottom: 64px;
+    display: grid; grid-template-columns: auto auto; gap: 8px 36px;
+    font: 400 14pt/1.5 var(--font-body);
+    color: var(--text-on-dark);
+  }
+  .slide--G .contact .k { color: var(--color-gray); font-weight: 400; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--G">
+    <div class="label">/ Cierre</div>
+    <h1 class="h1">Hablemos de tu inmobiliaria.</h1>
+    <span class="accent"></span>
+    <div class="contact">
+      <span class="k">Web</span><span>pulppo.com</span>
+      <span class="k">Email</span><span>hola@pulppo.com</span>
+      <span class="k">Oficina</span><span>Homero 664, Polanco · CDMX</span>
+    </div>
+    <img class="logo" src="../assets/pulppo-symbol-white.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+</body></html>

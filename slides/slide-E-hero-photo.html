@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide E · Hero Photo" subtitle="Layout E · foto full-bleed + overlay 70% + H1 blanco" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout E — Hero Photo</title>
+<link rel="stylesheet" href="_slide.css">
+<style>
+  .slide--E {
+    background:
+      linear-gradient(180deg, rgba(33,35,34,0.7) 0%, rgba(33,35,34,0.7) 100%),
+      url('../assets/photos/skyline.webp') center/cover;
+    color: var(--text-on-dark);
+  }
+  .slide--E .tag {
+    position: absolute; left: 64px; top: 64px;
+    font: 700 13pt/1.2 var(--font-body);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--color-gray);
+  }
+  .slide--E .h1 {
+    position: absolute; left: 64px; top: 260px; right: 200px;
+    font: 400 52pt/1.15 var(--font-display);
+    color: var(--text-on-dark);
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .slide--E .accent { position: absolute; left: 64px; top: 520px; width: 90px; }
+  .slide--E .sub {
+    position: absolute; left: 64px; top: 555px; right: 280px;
+    font: 400 18pt/1.45 var(--font-body);
+    color: var(--text-on-dark);
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--E">
+    <span class="tag">After Office</span>
+    <h1 class="h1">La primera aceleradora de inmobiliarias de Latinoamérica.</h1>
+    <span class="accent"></span>
+    <p class="sub">Conoce al equipo, la plataforma y la propuesta de valor — mientras disfrutas un buen networking.</p>
+    <img class="logo" src="../assets/pulppo-symbol-white.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+</body></html>

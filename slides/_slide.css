@@ -1,0 +1,60 @@
+/* ============================================================
+   Pulppo slide canvas · 1280×720 fixed stage
+   Auto-scales to viewport for preview cards.
+   ============================================================ */
+
+@import url("../colors_and_type.css");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap");
+
+:root {
+  --slide-w: 1280px;
+  --slide-h: 720px;
+  --edge: 64px; /* ~0.5" en pantalla a 96dpi en una pieza más grande; ajustado para 1280×720 */
+  --logo-top: 36px;
+  --logo-right: 56px;
+  --logo-size: 56px;
+  --accent-w: 90px;
+}
+
+html, body {
+  margin: 0;
+  background: #212322;
+  font-family: var(--font-body);
+  overflow: hidden;
+  height: 100%;
+}
+
+.stage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: relative;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  background: var(--surface-default);
+  overflow: hidden;
+  transform-origin: center center;
+}
+
+/* JS-driven scale; var --scale set on .stage */
+.stage[style*="--scale"] .slide {
+  transform: scale(var(--scale));
+}
+
+.slide--dark { background: var(--surface-dark); color: var(--text-on-dark); }
+
+.slide .logo {
+  position: absolute;
+  top: var(--logo-top);
+  right: var(--logo-right);
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.accent { display: inline-block; height: 1pt; width: var(--accent-w); background: var(--accent); }
+.accent-v { display: inline-block; width: 1pt; height: 100%; background: var(--accent); }

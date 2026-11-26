@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- @dsCard group="Slides" name="Slide A · Section Divider" subtitle="Layout A · apertura de sección, fondo dark, H1 + acento + símbolo blanco" viewport="1280x720" -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../assets/favicon.png">
+<title>Pulppo · Layout A — Section Divider</title>
+<link rel="stylesheet" href="_slide.css">
+<style>
+  .slide--A .label {
+    position: absolute; left: 64px; top: 64px;
+    font: 700 14pt/1.2 var(--font-body);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--color-gray);
+  }
+  .slide--A .h1 {
+    position: absolute; left: 64px; top: 280px; right: 280px;
+    font: 400 52pt/1.15 var(--font-display);
+    color: var(--text-on-dark);
+    letter-spacing: -0.01em;
+  }
+  .slide--A .accent { position: absolute; left: 64px; top: 520px; width: 90px; }
+  .slide--A .sub {
+    position: absolute; left: 64px; top: 555px; right: 280px;
+    font: 400 18pt/1.4 var(--font-body);
+    color: var(--text-on-dark);
+    max-width: 720px;
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide slide--dark slide--A">
+    <div class="label">02 · Tecnología</div>
+    <h1 class="h1">Una plataforma diseñada para brokers, no para clientes finales.</h1>
+    <span class="accent"></span>
+    <p class="sub">Construimos sobre la operación real de las inmobiliarias: captación, valuación, oferta, cierre. Sin atajos.</p>
+    <img class="logo" src="../assets/pulppo-symbol-white.png" alt="">
+  </div>
+</div>
+<script src="_fit.js"></script>
+</body></html>
