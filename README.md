@@ -4,6 +4,8 @@ Guía de marca navegable: colores, tipografía, espaciado, los siete layouts y l
 
 Sitio estático puro. No tiene build, no tiene dependencias y no necesita `npm install`.
 
+**Publicado:** https://landpd.github.io/pulppo-brand-center/
+
 ## Correr en local
 
 Desde la raíz del repo:
